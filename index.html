@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drawing Page</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
     <style>
         body {
             background-color: #f0f0f0;
@@ -53,13 +56,71 @@
             text-align: center;
             color: #333;
         }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        h3 {
+            text-align: center;
+            color: #000000;
+        }
+
+        a {
+            color: blueviolet; /* Change link color */
+            text-decoration: none; /* Remove default underline */
+            transition: color 0.3s ease; /* Add a smooth transition effect */
+        }
+
+        a:hover {
+            color: #fff; /* Change link color on hover */
+        }
+
+        button {
+            font-family: 'Shadows Into Light', cursive;
+            font-size: 20px;
+            padding: 5px;
+            height: 50px; /* Fixed height for the button */
+            width: 150px; /* Fixed width for the button */
+            margin-top: 20px;
+            cursor: crosshair;
+            display: block; /* Make it a block element */
+            margin: auto; /* Center the button */
+            border: 2px solid blueviolet; /* Change the border color */
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+        }
+
+        button:hover {
+            background-color: blueviolet; /* Change the background color on hover */
+            color: #fff; /* Change text color on hover */
+        }
     </style>
 </head>
 <body>
     <div id="drawing-container">
         <div id="text-scratches"></div>
-        <h1>Your Drawing Page</h1>
+        <h1>Life</h1>
+        <h2>A <a href="https://c0de.wtf">c0de</a> experiment</h2>
+        <br><br><br><br><br><br><br><br><br><br>
+        <button onclick="start()">Start</button>
         <!-- Add your drawing or content here -->
     </div>
+
+    <script>
+        function start() {
+            console.log("worked")
+        }
+
+        const fonts = ['Shadows Into Light', 'Pacifico', 'Dancing Script', 'Indie Flower'];
+
+        let currentFontIndex = 0;
+        let animationInterval;
+
+        animationInterval = setInterval(() => {
+            document.querySelector('button').style.fontFamily = fonts[currentFontIndex];
+            currentFontIndex = (currentFontIndex + 1) % fonts.length;
+        }, 500);
+    </script>
 </body>
 </html>
