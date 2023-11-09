@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
@@ -102,25 +103,11 @@
         <div id="text-scratches"></div>
         <h1>Life</h1>
         <h2>A <a href="https://c0de.wtf">c0de</a> experiment</h2>
+        <h3>WIP(everything can change)</h3>
         <br><br><br><br><br><br><br><br><br><br>
         <button onclick="start()">Start</button>
         <!-- Add your drawing or content here -->
     </div>
 
-    <script>
-        function start() {
-            console.log("worked")
-        }
-
-        const fonts = ['Shadows Into Light', 'Pacifico', 'Dancing Script', 'Indie Flower'];
-
-        let currentFontIndex = 0;
-        let animationInterval;
-
-        animationInterval = setInterval(() => {
-            document.querySelector('button').style.fontFamily = fonts[currentFontIndex];
-            currentFontIndex = (currentFontIndex + 1) % fonts.length;
-        }, 500);
-    </script>
 </body>
 </html>

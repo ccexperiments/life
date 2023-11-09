@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>End World</title>
+    <style>
+        body {
+            background-color: #1a1a1a; /* Dark background color */
+            color: #ffffff; /* Light text color */
+            font-family: 'Courier New', monospace; /* Monospace font */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #endworld-container {
+            box-sizing: border-box;
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #333333;
+            border-radius: 10px;
+            text-align: left;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1 {
+            color: #ffcc00; /* Yellow text color */
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #00ccff; /* Light blue link color */
+            text-decoration: none; /* Remove default underline */
+            transition: color 0.3s ease; /* Add a smooth transition effect */
+        }
+
+        a:hover {
+            color: #ffffff; /* White link color on hover */
+        }
+
+        .arrow-right {
+            font-size: 24px;
+            display: flex;
+            justify-content: flex-end;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="endworld-container">
+        <h1>End of everybody's life</h1>
+        <p>Have you ever thought that all lives and the world will end on <strong id="currentDate"></strong>?</p>
+        <div class="next-button">
+            <a onclick="loadrealworldend()" class="arrow-right">&#8594;</a>
+        </div>
+    </div>
+</body>
+</html>
