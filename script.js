@@ -12,7 +12,7 @@ function loadendworld() {
     }, 50)
     setTimeout(() => {
         document.getElementById("next-button").style.display = 'block'
-    }, 1000);
+    }, 3000);
     fetch('endworld.html')
         .then(response => response.text())
         .then(data => {
